@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "blog",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "express-partials": "git://github.com/publicclass/express-partials.git#c9b8adde89387dea"
   },
   "engines": {
-     "node": "0.10.x",
-     "npm": "1.2.x"
+    "node": "0.10.x",
+    "npm":  "1.2.x"
   }
 }
