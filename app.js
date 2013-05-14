@@ -6,6 +6,7 @@
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
+  , about = require('./routes/about')
   , http = require('http')
   , path = require('path')
   , partials = require('express-partials');
@@ -33,6 +34,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+app.get('/about', about.about);
 app.get('/users', user.list);
 
 http.createServer(app).listen(app.get('port'), function(){
