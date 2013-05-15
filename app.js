@@ -27,12 +27,7 @@ app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(function(req, res, next){
-		var cont = 0;
-  	cont++;
-	console.log("Visitas: " + cont);
-	next();
-});
+app.use(count());
 //res.locals.miVariable = valor;
 
 // development only
