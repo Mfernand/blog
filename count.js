@@ -12,5 +12,5 @@
 		console.log("Visitas: " + cont);
 		res.locals.aaa = cont;
 		next();
-	}
-}
+	};
+};
