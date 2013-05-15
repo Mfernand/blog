@@ -9,10 +9,10 @@ var express = require('express')
   , about = require('./routes/about')
   , http = require('http')
   , path = require('path')
-  , partials = require('express-partials');
+  , partials = require('express-partials')
+  , count = require('./count.js');
 
 var app = express();
-
 app.use(partials());
 
 // all environments
@@ -27,6 +27,7 @@ app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(count.count());
 
 // development only
 if ('development' == app.get('env')) {

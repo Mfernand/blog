@@ -2,8 +2,12 @@ body {
 	background-image: url("/images/bg.jpg");
 	padding: 20px;
  	font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+ 	color: #FFF;
 }
 
 a {
   color: #00B7FF;
+}
+#desarrolladores {
+	text-align: center;
 }
