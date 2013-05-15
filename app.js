@@ -10,7 +10,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , partials = require('express-partials')
-  , count = require('./count.js');
+  , count = require('./count');
 
 var app = express();
 app.use(partials());
@@ -27,7 +27,13 @@ app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(count.count());
+app.use(function(req, res, next){
+		var cont = 0;
+  	cont++;
+	console.log("Visitas: " + cont);
+	next();
+});
+//res.locals.miVariable = valor;
 
 // development only
 if ('development' == app.get('env')) {
