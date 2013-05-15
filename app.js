@@ -10,7 +10,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , partials = require('express-partials')
-  , count = require('./count');
+  , count = require('./count.js');
 
 var app = express();
 app.use(partials());

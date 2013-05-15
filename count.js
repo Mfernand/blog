@@ -7,7 +7,7 @@
 	return function(req, res, next){
 		cont++;
 		console.log("Visitas: " + cont);
-		res.locals.miVariable = cont;
+		res.locals.aaa = cont;
 		next();
-	};
-};
+	}
+}
