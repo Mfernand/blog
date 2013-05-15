@@ -1,10 +1,8 @@
-#div_video{
-	width: 98%;
-	float: left;
-	padding: 1%;
-	text-align: center;
+body{
+	padding: 20px;
 }
+
 #video{
-	width: 40%;
+	width: 45%;
 	box-shadow: 5px 5px 5px #000;
 }

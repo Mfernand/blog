@@ -14,6 +14,7 @@ var express = require('express')
 
 var app = express();
 app.use(partials());
+app.use(count());
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -27,8 +28,6 @@ app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(count());
-//res.locals.miVariable = valor;
 
 // development only
 if ('development' == app.get('env')) {

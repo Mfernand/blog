@@ -1,6 +1,5 @@
 body {
 	background-image: url("/images/bg.jpg");
-	padding: 20px;
  	font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
  	color: #FFF;
 }
@@ -8,6 +7,16 @@ body {
 a {
   color: #00B7FF;
 }
+
+#div_video{
+	width: 98%;
+	text-align: center;
+}
+
 #desarrolladores {
 	text-align: center;
+}
+
+#visitas {
+	text-align: right;
 }
